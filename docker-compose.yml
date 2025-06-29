@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  hospital-simulator:
+    build: .
+    image: hospital-simulator:latest
+    ports:
+      - "8080:8080"
+    command: ["java", "-jar", "app.jar", "F,F", "P"]
