@@ -9,7 +9,7 @@ COPY . ./
 
 # Build the application
 RUN ./mvnw dependency:resolve
-RUN ./mvnw package -DskipTests
+RUN ./mvnw package
 
 # Copy the built JAR file
 COPY target/*.jar app.jar
